@@ -1,12 +1,13 @@
 // ==UserScript==
 // @name         Relocate Tab View Bar in top dock
 // @namespace    https://github.com/jamezpolley
-// @version      0.2
+// @version      0.2.1
 // @description  If the top dock contains a tab-view panel, move the tab bar to top of window
 // @author       jp@jamezpolley.com
 // @match        https://app.tana.inc/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=tana.inc
 // @grant        none
+// @run-at context-menu
 // ==/UserScript==
 'use strict';
 let callback = (function() {
