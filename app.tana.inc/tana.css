@@ -1,0 +1,33 @@
+/* I just don't like how big the margin is */
+html {
+    --panelTitleTopMargin: 0.3rem;
+  }
+  
+  div[class^='PanelHeader'] {
+    margin-top: 0.3rem !important;
+    margin-bottom: 0.3rem !important;
+  }
+  
+  /* Highlight nodes with their primary bullet color */
+  .bulletAndContent[style*=bulletColor1Dimmed]:not(.istuple) >div > div[class^="Content-module"] {
+    padding: 4px;  
+    background-color: var(--bulletColor1Dimmed);
+  }
+  
+  /* Fix calendar breakage introduced in 192 */
+  div[class^="Calendar"] span,
+  div[class^="Calendar"] label,
+  div[class^="Calendar"] input {
+      vertical-align: middle;
+  }
+  div[class^="Calendar"] input[class*="NodeDoneCheckbox"] {
+      display: inline-block;
+  }
+  
+  /* Hide the Panel Header in the top dock */
+  div[data-dock="top"] >div>div> div[class^="PanelHeader-module_panelHeader"] {
+    display:none
+ }
+ div[class^="NodePathBar-module_pathBar"]::after {
+    content: "   |   ";
+}
